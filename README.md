@@ -2,7 +2,7 @@
 # This guide walks through setting up Jenkins on an EC2 instance, installing required dependencies, and configuring a Jenkins pipeline to run Terraform code.
 # 🖥️ EC2 Instance Setup
 - Instance Name: Jenkins
-- Instance Type: c7i-flex.large    ## for speed access
+- Instance Type: c7i-flex.large      ## for speed access
 - OS: Amazon Linux 2
   
 # 🔧 Installation Steps
