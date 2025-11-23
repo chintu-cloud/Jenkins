@@ -387,6 +387,7 @@ connect Jenkins-master
 
    then create New item +
        name = first-pipeline
+       
        install plugins = pipeline: stage view 
        
    then goto configure option 
