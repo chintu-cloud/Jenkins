@@ -361,6 +361,8 @@ connect Jenkins-master
             }
          }
      }
+
+     
      then apply & save  -->  then build now  
      <img width="1035" height="758" alt="Screenshot (443)" src="https://github.com/user-attachments/assets/89264fba-a78f-46c3-ba11-b97aadb00523" />
      
