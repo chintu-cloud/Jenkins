@@ -240,6 +240,7 @@ It checks for changes according to the schedule (every minute)
  
 
 # ====== Day03 jankins ======
+-->   calling for jenkins master server  <-->  slave server
 
 # Jenkins – Master/Slave Setup, Change Default Jenkins Port & Change Jenkins Home Path
 
