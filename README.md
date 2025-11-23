@@ -14,7 +14,8 @@
 - OS: Amazon Linux 2
 
 
-<img width="2672" height="1709" alt="image" src="https://github.com/user-attachments/assets/0eff3c92-2f62-4433-a97b-144a574f92c7" />
+<img width="1200" height="630" alt="image" src="https://github.com/user-attachments/assets/16cb2459-3486-4797-a6cb-5902eb9c6b85" />
+
 
 <img width="600" height="425" alt="image" src="https://github.com/user-attachments/assets/e6df7473-cbdd-4648-8763-1701f471476f" />
 
