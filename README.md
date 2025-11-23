@@ -316,11 +316,15 @@ connect Jenkins-master
              200 MB
              1 GB
              2 GB
+
+   
    <img width="336" height="426" alt="Screenshot 2025-11-22 114853" src="https://github.com/user-attachments/assets/ba2b2fe0-5c93-491c-aa6d-510f0dd7c90f" />
+   
    <img width="410" height="758" alt="Screenshot 2025-11-22 114943" src="https://github.com/user-attachments/assets/956ca9f4-23dc-46e8-8310-249dd56845ed" />
 
  
  connect slave 
+ 
              sudo su -
              yum install git -y                                          // ------- install git --------
              sudo yum install java-17-amazon-corretto.x86_64             // -------java dependency for jenkins-------
