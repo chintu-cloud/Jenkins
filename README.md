@@ -62,29 +62,35 @@ Attach an IAM role to the EC2 instance with permissions to manage AWS resources.
 Create a new pipeline job and use the following script:
 
 
-    pipeline {
-      stages {
-          stage('Clone Repo') {
+ pipeline {
+   agent any
+
+    stages {
+        stage('git clone') {
             steps {
-                 git url: 'https://github.com/chintu-cloud/Terraform_CICD.git'
+             git branch: 'main', url: 'https://github.com/chintu-cloud/Terraform_CICD.git
             }
         }
-        stage('Terraform Init') {
+        stage('init') {
             steps {
-                dir('day-1-basic-code') {
-                    sh 'terraform init'
-                }
+               sh 'terraform init'
             }
         }
-        stage('Terraform Destroy') {
+        stage('plan') {
             steps {
-                dir('day-1-basic-code') {
-                    sh 'terraform destroy -auto-approve'
-                }
+              sh 'terraform plan'
             }
+        }
+        stage('apply') {
+            steps {
+              sh 'terraform apply/destroy -auto-approve'
+            }
+      
         }
     }
-    }
+}
+
+
 
 # Jenkins Workspace Path
 Terraform code will execute from:
@@ -126,43 +132,35 @@ Choices:
 apply
 destroy
 # Declarative Pipeline Example
-    pipeline {
-    agent any
+
+ pipeline {
+   agent any
 
     stages {
-
-        stage('Clone Repo') {
+        stage('git clone') {
             steps {
-                 git url: branch: 'main', 'https://github.com/chintu-cloud/Terraform_CICD.git'
+             git branch: 'main', url: 'https://github.com/chintu-cloud/Terraform_CICD.git
             }
         }
-
-        stage('Terraform Init') {
+        stage('init') {
             steps {
-                dir('day-1-basic-code') {
-                    sh 'terraform init'
-                }
+               sh 'terraform init'
             }
         }
-
-        stage('Terraform Plan') {
+        stage('plan') {
             steps {
-                dir('day-1-basic-code') {
-                    sh 'terraform plan'
-                }
+              sh 'terraform plan'
             }
         }
-
-        stage('Terraform Apply/Destroy') {
+        stage('apply') {
             steps {
-                dir('day-1-basic-code') {
-                    sh "terraform ${params.action} -auto-approve"
-                }
+              sh 'terraform apply / destroy -auto-approve'
             }
+      
         }
-
     }
-    }
+}
+
 
 # 📜 5. Scripted Pipeline Example
     node {
