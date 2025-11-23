@@ -386,8 +386,7 @@ connect Jenkins-master
    <img width="1920" height="457" alt="Screenshot (444)" src="https://github.com/user-attachments/assets/f5a7e6f7-d136-447d-be98-caadd53080f5" />
 
    then create New item +
-       name = first-pipeline
-       
+       name = first-pipeline , 
        install plugins = pipeline: stage view 
        
    then goto configure option 
