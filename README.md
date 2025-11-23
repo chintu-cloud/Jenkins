@@ -334,9 +334,10 @@ connect Jenkins-master
 5. then copy Jenkins-master server public IP & paste in search bar with port no.
 
      ----  Jenkins port no. = 8080 ----    (access the jenkins server)
+   
    ex:  13.223.100.239:8080
 
-6. then Go to Jenkin server page
+7. then Go to Jenkin server page
          --> unlock Jenkins option their select
               /var/lib/jenkins/secrets/initialAdminpassword
    <img width="1027" height="394" alt="Screenshot 2025-11-22 114328" src="https://github.com/user-attachments/assets/b3dcd895-2560-4999-9f35-545973cf0d3b" />
@@ -345,10 +346,10 @@ connect Jenkins-master
    <img width="637" height="37" alt="Screenshot 2025-11-22 114307" src="https://github.com/user-attachments/assets/c2b55d6f-e041-4651-8263-374c74573df0" />
    give password in path
 
-7. then create first Admin user
+8. then create first Admin user
    <img width="1052" height="667" alt="Screenshot 2025-11-22 114537" src="https://github.com/user-attachments/assets/1d0213da-145e-4b87-94f1-b18e58ec26b3" />
 
-8. then create node
+9. then create node
       name = node -1
       no. of executors = 1
       Remote root directry = /home/ec2-user/
