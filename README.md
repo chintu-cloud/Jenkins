@@ -407,10 +407,16 @@ Environment="JENKINS_PORT=9090"
 <img width="771" height="675" alt="Screenshot (445)" src="https://github.com/user-attachments/assets/82b9992b-b231-4505-b3b0-dec20b86733b" />
 
 
+
 Restart Jenkins
+
 sudo systemctl daemon-reload
 sudo systemctl restart jenkins
 sudo systemctl status jenkins
+
+
+
+
 <img width="1639" height="621" alt="Screenshot (446)" src="https://github.com/user-attachments/assets/e026265a-f409-4254-acaf-ac6be52240f1" />
 
 
