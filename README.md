@@ -270,6 +270,11 @@ Isolate builds for security
       2. slave  (server)
       3. c7i-flex.large (instance type)
       4. key-pair required
+      5. Attach IAM role 
+      
+
+      <img width="1833" height="583" alt="Screenshot 2025-11-23 104926" src="https://github.com/user-attachments/assets/1e6413c5-27a8-4f89-8d19-a80a6f7274cd" />
+
 
 connect Jenkins-master
 
