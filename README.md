@@ -50,6 +50,8 @@ sudo yum install git -y
 # Java (required for Jenkins)
 sudo yum install java-17-amazon-corretto.x86_64 -y
 
+<img width="1920" height="1920" alt="image" src="https://github.com/user-attachments/assets/e7f10196-27cc-4eb6-a064-556229a529cc" />
+
 # Jenkins
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
@@ -59,6 +61,8 @@ sudo yum install jenkins -y
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/8aa1da6f-8d8e-4284-b836-caae984804e7" />
+
 # Terraform
 sudo yum install -y yum-utils
 
@@ -66,8 +70,8 @@ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinu
 
 sudo yum -y install terraform
 
-<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/8aa1da6f-8d8e-4284-b836-caae984804e7" />
-<img width="1920" height="1920" alt="image" src="https://github.com/user-attachments/assets/e7f10196-27cc-4eb6-a064-556229a529cc" />
+
+
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/4eb41e0f-83a4-4239-a572-b485c11a8e02" />
 
 
