@@ -273,7 +273,8 @@ Isolate builds for security
       5. Attach IAM role 
       
 
-      <img width="1833" height="583" alt="Screenshot 2025-11-23 104926" src="https://github.com/user-attachments/assets/1e6413c5-27a8-4f89-8d19-a80a6f7274cd" />
+ <img width="1833" height="583" alt="Screenshot 2025-11-23 104926" src="https://github.com/user-attachments/assets/d4b45add-9209-47d8-bebb-b576bc9432ef" />
+ 
 
 
 connect Jenkins-master
