@@ -234,7 +234,9 @@ It checks for changes according to the schedule (every minute)
  • GitHub webhook
  • Poll SCM trigger
 
-# ====== day03 jankins ======
+ 
+
+# ====== Day03 jankins ======
 
 # Jenkins – Master/Slave Setup, Change Default Jenkins Port & Change Jenkins Home Path
 
@@ -270,6 +272,7 @@ Isolate builds for security
       4. key-pair required
 
 connect Jenkins-master
+
              sudo su -
              
              yum install git -y                                          // ------- install git --------
