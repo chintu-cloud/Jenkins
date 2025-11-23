@@ -12,6 +12,20 @@
 - Instance Name: Jenkins
 - Instance Type: c7i-flex.large      ## for speed access
 - OS: Amazon Linux 2
+
+
+<img width="2672" height="1709" alt="image" src="https://github.com/user-attachments/assets/0eff3c92-2f62-4433-a97b-144a574f92c7" />
+
+<img width="600" height="425" alt="image" src="https://github.com/user-attachments/assets/e6df7473-cbdd-4648-8763-1701f471476f" />
+
+<img width="474" height="355" alt="image" src="https://github.com/user-attachments/assets/3f16503c-ce2c-4e5b-8302-688b3e73ce9d" />
+
+
+
+
+
+
+
   
 # 🔧 Installation Steps
 1. Connect to EC2 and Switch to Root
