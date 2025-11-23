@@ -30,7 +30,7 @@ pipeline {
 
 
 
-# ------- Day-3 ---------
+# ------- Day-2 ---------
 ##################code for add parameters and choices directly in the code ###########
 pipeline {
     agent any
