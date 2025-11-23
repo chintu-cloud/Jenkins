@@ -85,7 +85,6 @@ Create a new pipeline job and use the following script:
             steps {
               sh 'terraform apply/destroy -auto-approve'
             }
-      
         }
     }
 }
@@ -156,7 +155,6 @@ destroy
             steps {
               sh 'terraform apply / destroy -auto-approve'
             }
-      
         }
     }
 }
