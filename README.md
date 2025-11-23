@@ -255,12 +255,49 @@ Scale Jenkins horizontally
 
 Isolate builds for security
 
-# create 2 instances 1 master 1 slave t2.medium 
-in the master server install 
-1. java
-2. jenkins
-then start and check the status
-access the jenkins using the port 8080 with public ip
+
+========= master -slave concept =========
+
+# lunch 2 instances 
+      1. Jenkins-master (server)
+      2. slave  (server)
+      3. c7i-flex.large (instance type)
+      4. key-pair required
+
+connect Jenkins-master
+             sudo su -
+             yum install git -y                                          // ------- install git --------
+             sudo yum install java-17-amazon-corretto.x86_64             // -------java dependency for jenkins-------
+             
+             sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+             sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+             sudo yum install jenkins -y
+             sudo systemctl enable jenkins
+             sudo systemctl start jenkins                                 //------ jenkins install-------
+
+             sudo yum install -y yum-utils
+             sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+             sudo yum -y install terraform                                // -------install terraform --------
+             
+             
+5. then copy Jenkins-master server public IP & paste in search bar with port no.
+
+     ----  Jenkins port no. = 8080 ----    (access the jenkins server)
+   ex:  13.223.100.239:8080
+
+6. then Go to Jenkin server page
+         --> unlock Jenkins option their select
+              /var/lib/jenkins/secrets/initialAdminpassword
+   <img width="1027" height="394" alt="Screenshot 2025-11-22 114328" src="https://github.com/user-attachments/assets/b3dcd895-2560-4999-9f35-545973cf0d3b" />
+   
+
+
+
+
+
+
+   
+
 # On the Jenkins Master
 
 Go to: Manage Jenkins → Manage Nodes and Clouds → New Node
