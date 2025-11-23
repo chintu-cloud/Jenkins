@@ -66,7 +66,7 @@ Create a new pipeline job and use the following script:
       stages {
           stage('Clone Repo') {
             steps {
-                git url: 'https://github.com/Ranjit-08/Terraform-Repo.git'
+                 git url: 'https://github.com/chintu-cloud/Terraform_CICD.git'
             }
         }
         stage('Terraform Init') {
@@ -133,7 +133,7 @@ destroy
 
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/Ranjit-08/Terraform-Repo.git'
+                 git url: branch: 'main', 'https://github.com/chintu-cloud/Terraform_CICD.git'
             }
         }
 
@@ -168,7 +168,7 @@ destroy
     node {
 
     stage('Clone Repo') {
-        git branch: 'main', url: 'https://github.com/Ranjit-08/jenkins.git'
+        git url: branch: 'main', 'https://github.com/chintu-cloud/Terraform_CICD.git'
     }
 
     stage('Terraform Init') {
