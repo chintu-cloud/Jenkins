@@ -411,7 +411,9 @@ Environment="JENKINS_PORT=9090"
 Restart Jenkins
 
 sudo systemctl daemon-reload
+
 sudo systemctl restart jenkins
+
 sudo systemctl status jenkins
 
 
