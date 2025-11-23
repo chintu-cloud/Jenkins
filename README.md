@@ -351,9 +351,13 @@ connect Jenkins-master
 
 9. then create node
       name = node -1
+   
       no. of executors = 1
+   
       Remote root directry = /home/ec2-user/
-      level = terraform 
+   
+      level = terraform
+   
       disk = 200 MB
              200 MB
              1 GB
