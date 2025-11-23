@@ -1,4 +1,5 @@
- # Day 01 – Jenkins Setup on AWS EC2 🚀
+ # ======== Day 01 – Jenkins Setup on AWS EC2 🚀 ========
+ 
 # This guide walks through setting up Jenkins on an EC2 instance, installing required dependencies, and configuring a Jenkins pipeline to run Terraform code.
 # 🖥️ EC2 Instance Setup
 - Instance Name: Jenkins
@@ -93,7 +94,10 @@ cd /var/lib/jenkins/workspace/<pipeline-name>
 - Monitor console output for execution logs.
 
 
-# DAY02 JENKINS
+
+
+
+#======== DAY02 JENKINS ========
 -------------------------
 Connect to Jenkins on EC2
 install the dependencies 
@@ -230,7 +234,8 @@ It checks for changes according to the schedule (every minute)
  • GitHub webhook
  • Poll SCM trigger
 
-# day03 jankins
+# ====== day03 jankins ======
+
 # Jenkins – Master/Slave Setup, Change Default Jenkins Port & Change Jenkins Home Path
 
 This guide covers three important Jenkins administration concepts:
@@ -289,6 +294,67 @@ connect Jenkins-master
          --> unlock Jenkins option their select
               /var/lib/jenkins/secrets/initialAdminpassword
    <img width="1027" height="394" alt="Screenshot 2025-11-22 114328" src="https://github.com/user-attachments/assets/b3dcd895-2560-4999-9f35-545973cf0d3b" />
+        (for access copy & paste in inside server with using password)
+   using cat command
+   <img width="637" height="37" alt="Screenshot 2025-11-22 114307" src="https://github.com/user-attachments/assets/c2b55d6f-e041-4651-8263-374c74573df0" />
+   give password in path
+
+7. then create first Admin user
+   <img width="1052" height="667" alt="Screenshot 2025-11-22 114537" src="https://github.com/user-attachments/assets/1d0213da-145e-4b87-94f1-b18e58ec26b3" />
+
+8. then create node
+      name = node -1
+      no. of executors = 1
+      Remote root directry = /home/ec2-user/
+      level = terraform 
+      disk = 200 MB
+             200 MB
+             1 GB
+             2 GB
+   <img width="1052" height="667" alt="Screenshot 2025-11-22 114537" src="https://github.com/user-attachments/assets/e2fe00dc-e9ed-47e4-9367-e24e1507dae4" />
+   <img width="336" height="426" alt="Screenshot 2025-11-22 114853" src="https://github.com/user-attachments/assets/ba2b2fe0-5c93-491c-aa6d-510f0dd7c90f" />
+   <img width="410" height="758" alt="Screenshot 2025-11-22 114943" src="https://github.com/user-attachments/assets/956ca9f4-23dc-46e8-8310-249dd56845ed" />
+
+ 
+ connect slave 
+             sudo su -
+             yum install git -y                                          // ------- install git --------
+             sudo yum install java-17-amazon-corretto.x86_64             // -------java dependency for jenkins-------
+             
+             sudo yum install -y yum-utils
+             sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+             sudo yum -y install terraform                                // -------install terraform --------
+
+   then copy node-1 agent & paste inside in slave server 
+    <img width="1432" height="283" alt="Screenshot 2025-11-22 115321" src="https://github.com/user-attachments/assets/06457d22-6ec7-425f-89d5-4ddc3338d0d5" />
+
+   then check node-1 is showing online
+   <img width="1920" height="457" alt="Screenshot (444)" src="https://github.com/user-attachments/assets/f5a7e6f7-d136-447d-be98-caadd53080f5" />
+
+   then create New item +
+       name = first-pipeline
+       install plugins = pipeline: stage view 
+       
+   then goto configure option 
+      pipeline script inside code given
+
+         pipeline {
+            agent none   // We will use per-stage agents
+            stages {
+
+                     /* -----------------------------
+                       GIT CLONE (Runs on any node)
+                      ------------------------------*/
+             stage('Git Clone') {
+                 agent { label 'terraform' }   // OR 'master' if you prefer
+                 steps {
+                     git url: branch: 'main', 'https://github.com/chintu-cloud/Terraform_CICD.git'
+                }
+            }
+         }
+     }
+
+
    
 
 
