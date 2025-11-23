@@ -271,7 +271,9 @@ Isolate builds for security
 
 connect Jenkins-master
              sudo su -
+             
              yum install git -y                                          // ------- install git --------
+             
              sudo yum install java-17-amazon-corretto.x86_64             // -------java dependency for jenkins-------
              
              sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -311,7 +313,6 @@ connect Jenkins-master
              200 MB
              1 GB
              2 GB
-   <img width="1052" height="667" alt="Screenshot 2025-11-22 114537" src="https://github.com/user-attachments/assets/e2fe00dc-e9ed-47e4-9367-e24e1507dae4" />
    <img width="336" height="426" alt="Screenshot 2025-11-22 114853" src="https://github.com/user-attachments/assets/ba2b2fe0-5c93-491c-aa6d-510f0dd7c90f" />
    <img width="410" height="758" alt="Screenshot 2025-11-22 114943" src="https://github.com/user-attachments/assets/956ca9f4-23dc-46e8-8310-249dd56845ed" />
 
@@ -353,64 +354,11 @@ connect Jenkins-master
             }
          }
      }
+     then apply & save  -->  then build now  
+     <img width="1035" height="758" alt="Screenshot (443)" src="https://github.com/user-attachments/assets/89264fba-a78f-46c3-ba11-b97aadb00523" />
+     
 
-
-   
-
-
-
-
-
-
-   
-
-# On the Jenkins Master
-
-Go to: Manage Jenkins → Manage Nodes and Clouds → New Node
-
-Enter node name → Choose Permanent Agent
-
-Fill the settings:
-
-Remote root directory: /home/ec2-user
-
-Labels: dev (or anything you want)
-
-# create a node in master for slave
-settings --> nodes --> new node --> node1 --> click on permanent agent create 
-change the remote root directory to 
-/home/ec2-user
-write a label dev
-save 
-click on the node copy the agent link 
-
-# 🔧 Steps to Configure Slave (Agent) Node
-# 1️⃣ On the Agent (Slave) machine
-
-Install Java (Jenkins requires Java):
-
-sudo yum install java-11-openjdk -y
-
-yum install git -y
-
-install the agent in the slaves server inside 'one by one first url then command 
-
-The node will connect successfully.
-
-now if you run any pipeline in the master with the label dev it will automaticlly reflect in the slave server path inside 
-
-    pipeline {
-     agent { label 'dev' }
-
-    stages {
-        stage('clone') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Ranjit-08/jenkins.git'
-            }
-        }
-    }
-    }
-
+# ======= Change port no. =======
 
 🔥 2. Change the Default Jenkins Port (8080 → Another Port)
 
@@ -423,25 +371,28 @@ Open the systemd service file:
 
 sudo vi /usr/lib/systemd/system/jenkins.service
 
-
 Find this line:
 
 Environment="JENKINS_PORT=8080"
 
-
 Change it to:
 
 Environment="JENKINS_PORT=9090"
+<img width="771" height="675" alt="Screenshot (445)" src="https://github.com/user-attachments/assets/82b9992b-b231-4505-b3b0-dec20b86733b" />
+
 
 Restart Jenkins
 sudo systemctl daemon-reload
 sudo systemctl restart jenkins
 sudo systemctl status jenkins
+<img width="1639" height="621" alt="Screenshot (446)" src="https://github.com/user-attachments/assets/e026265a-f409-4254-acaf-ac6be52240f1" />
 
 
 Verify in browser:
 
 http://public-ip:9090
+<img width="1675" height="985" alt="Screenshot (447)" src="https://github.com/user-attachments/assets/7eefe31b-6de0-4c62-9999-1411a8ef3ab7" />
+
 
 📦 3. Change the Default Jenkins Home Path (/var/lib/jenkins)
 
