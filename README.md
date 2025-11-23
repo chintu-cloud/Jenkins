@@ -240,7 +240,8 @@ It checks for changes according to the schedule (every minute)
  
 
 # ====== Day03 jankins ======
--->   calling for jenkins master server  <-->  slave server
+-->   calling for jenkins master server  <-to->  slave server
+    jenkins master server inside all data come to slave server with node-1 (Agent node) connecting server
 
 # Jenkins – Master/Slave Setup, Change Default Jenkins Port & Change Jenkins Home Path
 
