@@ -11,6 +11,8 @@
 # 🖥️ EC2 Instance Setup
 - Instance Name: Jenkins
 - Instance Type: c7i-flex.large      ## for speed access
+  
+    ( only for free tier account )
 - OS: Amazon Linux 2
 
 
