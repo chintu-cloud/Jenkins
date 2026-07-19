@@ -343,17 +343,18 @@ connect Jenkins-master
 
 7. then Go to Jenkin server page
          --> unlock Jenkins option their select
-              /var/lib/jenkins/secrets/initialAdminpassword
+
+    /var/lib/jenkins/secrets/initialAdminpassword
    <img width="1027" height="394" alt="Screenshot 2025-11-22 114328" src="https://github.com/user-attachments/assets/b3dcd895-2560-4999-9f35-545973cf0d3b" />
         (for access copy & paste in inside server with using password)
    using cat command
    <img width="637" height="37" alt="Screenshot 2025-11-22 114307" src="https://github.com/user-attachments/assets/c2b55d6f-e041-4651-8263-374c74573df0" />
    give password in path
 
-8. then create first Admin user
+9. then create first Admin user
    <img width="1052" height="667" alt="Screenshot 2025-11-22 114537" src="https://github.com/user-attachments/assets/1d0213da-145e-4b87-94f1-b18e58ec26b3" />
 
-9. then create node
+10. then create node
       name = node -1
    
       no. of executors = 1
