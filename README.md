@@ -3,8 +3,8 @@
 
 
  
- 
- 
+  
+  
  # ===== Day 01 – Jenkins Setup on AWS EC2 🚀 =====
  
 # This guide walks through setting up Jenkins on an EC2 instance, installing required dependencies, and configuring a Jenkins pipeline to run Terraform code.
@@ -146,8 +146,10 @@ install the dependencies
 
 # Retrieve the initial Jenkins admin password:
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
 # Open Jenkins in browser:
 http://public-ip:8080
+
 # 📦 2. Install Required Plugins
 Navigate to:
 Jenkins → Manage Jenkins → Plugins → Available Plugins
